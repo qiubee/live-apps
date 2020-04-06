@@ -1,5 +1,8 @@
-const app = require("express")();
+const express = require("express");
+const router = require("./routes/router");
 
+// server
+const app = express();
 const port = 8000;
 
 // use public folder for static files
