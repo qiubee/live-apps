@@ -4,7 +4,8 @@
   "description": "real-time apps",
   "main": "chat/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "chat": "node chat/server.js",
+    "devchat": "nodemon chat/server.js"
   },
   "repository": {
     "type": "git",
