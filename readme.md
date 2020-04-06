@@ -17,7 +17,7 @@ npm install
 3. Run server
 
 ```bash
-npm run start
+npm run chat
 ```
 
 4. Open `localhost:8000` in the browser
