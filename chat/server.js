@@ -29,6 +29,7 @@ chat.on("connection", function(socket) {
 
 	socket.on("disconnect", function() {
 		members--;
+		socket.broadcast.emit("general", "User left.");
 		console.log("user disconnected (" + members + " members remaining)");
 	});
 });
