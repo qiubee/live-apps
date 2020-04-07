@@ -14,18 +14,18 @@ app.use(express.static("chat/public"));
 app.use("/", router);
 
 io.on("connection", function(socket) {
-    console.log("a user connected");
-    socket.on("disconnect", function() {
-        console.log("user disconnected");
-    });
+	console.log("a user connected");
+	socket.on("disconnect", function() {
+		console.log("user disconnected");
+	});
 
-    socket.on("chat message", function(message) {
-        console.log("Message: " + message);
-    });
+	socket.on("chat message", function(message) {
+		console.log("Message: " + message);
+	});
 });
 
 server.listen(port, function () {
-    console.log(`Listening on port \u001b[1m\u001b[36m${port}\u001b[0m\n\u001b[1m\u001b[36mlocalhost:${port}\u001b[0m`);
+	console.log(`Listening on port \u001b[1m\u001b[36m${port}\u001b[0m\n\u001b[1m\u001b[36mlocalhost:${port}\u001b[0m`);
 });
 
 function rewardMember() {
