@@ -1,5 +1,9 @@
 (function() {
 	const socket = io();
+
+	// Ask to enter username
+	socket.emit("username", prompt("Enter a username to start chatting:"));
+
 	const form = document.querySelector("form");
 	form.addEventListener("submit", function(event) {
 		event.preventDefault();
