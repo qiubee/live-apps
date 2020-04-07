@@ -5,12 +5,12 @@
 }
 
 body {
-    font: 13px Helvetica, Arial; 
+    font: 0.9em Helvetica, Arial; 
 }
 
 form {
     background: #000;
-    padding: 3px;
+    padding: 0.2em;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -18,16 +18,16 @@ form {
 
 form input {
     border: 0;
-    padding: 10px;
-    width: 90%;
-    margin-right: .5%;
+    padding: 0.65em;
+    width: 89.5%;
+    margin-right: 0.5%;
 }
 
 form button {
-    width: 9%;
+    width: 10%;
     background: rgb(130, 224, 255);
     border: none;
-    padding: 10px;
+    padding: 0.65em;
 }
 
 #messages {
@@ -37,9 +37,15 @@ form button {
 }
 
 #messages li {
-    padding: 5px 10px;
+	padding: 0.4em 0.6em;
 }
 
 #messages li:nth-child(odd) {
     background: #eee;
+}
+
+#messages li.general {
+	background: #b4bbfb;
+	font-style: italic;
+	border-left: 0.3em solid black;
 }
