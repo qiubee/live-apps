@@ -32,6 +32,10 @@ function rewardMember() {
 
 }
 
+function updateStars() {
+    
+}
+
 function checkGrammar() {
 
 }
