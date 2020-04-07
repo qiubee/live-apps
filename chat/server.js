@@ -27,3 +27,11 @@ io.on("connection", function(socket) {
 server.listen(port, function () {
     console.log(`Listening on port \u001b[1m\u001b[36m${port}\u001b[0m\n\u001b[1m\u001b[36mlocalhost:${port}\u001b[0m`);
 });
+
+function rewardMember() {
+
+}
+
+function checkGrammar() {
+
+}
