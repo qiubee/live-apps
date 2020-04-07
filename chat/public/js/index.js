@@ -10,18 +10,23 @@
 	});
 
 	socket.on("chat message", function(message) {
-		addMessage(message);
+		addMessageToChat(addMessage(message));
 	});
 
 	socket.on("general", function(message) {
-		addMessage(message);
+		const msg = addMessage(message);
+		msg.setAttribute("class", "general");
+		addMessageToChat(msg);
 	});
 
 	function addMessage(message) {
-		const chatlist = document.getElementById("messages");
 		const text = document.createTextNode(message);
 		const li = document.createElement("li");
 		li.appendChild(text);
-		chatlist.appendChild(li);
+		return li;
+	}
+
+	function addMessageToChat(message) {
+		document.getElementById("messages").appendChild(message);
 	}
 })();
