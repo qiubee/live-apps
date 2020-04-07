@@ -14,23 +14,38 @@ app.use(express.static("chat/public"));
 app.use("/", router);
 
 // chat sockets
-let members = 0;
+let members = [];
 chat.on("connection", function(socket) {
-	members++;
-	console.log("a user connected (" + members + " total members)");
-
+	let name;
+	console.log("a user connected...");
 	socket.emit("general", "Welcome to the chat!");
-	socket.broadcast.emit("general", "New user joined!");
+	
+	socket.on("username", function(username) {
+		if (username === null) {
+			username = "Anonymous";
+		}
+		console.log("new user: " + username + " (" + (members.length + 1) + " total members)");
+		name = username + "#" + members.length;
+		members.push(name);
+		socket.broadcast.emit("general", name + " joined the chat!");
+	});
 
 	socket.on("chat message", function(message) {
-		console.log("Message: " + message);
-		chat.emit("chat message", message);
+		console.log(name + " messaged: " + message);
+		chat.emit("chat message", name + ": " + message);
 	});
 
 	socket.on("disconnect", function() {
-		members--;
-		socket.broadcast.emit("general", "User left.");
-		console.log("user disconnected (" + members + " members remaining)");
+		socket.broadcast.emit("general", name + " left.");
+		if (members.length < 0) {
+			members = members.reduce(function(member, currentMember) {
+				if (member !== currentMember) {
+					member.push(member);
+				} return member;
+			}, []);
+		}
+		console.log(members);
+		console.log("user disconnected (" + members.length + " members remaining)");
 	});
 });
 
