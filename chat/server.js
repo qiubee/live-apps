@@ -27,6 +27,7 @@ chat.on("connection", function(socket) {
 		console.log("new user: " + username + " (" + (members.length + 1) + " total members)");
 		name = username + "#" + members.length;
 		members.push(name);
+		console.log("members:", members);
 		socket.broadcast.emit("general", name + " joined the chat!");
 	});
 
