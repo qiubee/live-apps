@@ -8,7 +8,20 @@
 		input.value = "";
 		return false;
 	});
+
 	socket.on("chat message", function(message) {
-		document.getElementById("messages").appendChild("li").textContent(message);
+		addMessage(message);
 	});
+
+	socket.on("general", function(message) {
+		addMessage(message);
+	});
+
+	function addMessage(message) {
+		const chatlist = document.getElementById("messages");
+		const text = document.createTextNode(message);
+		const li = document.createElement("li");
+		li.appendChild(text);
+		chatlist.appendChild(li);
+	}
 })();
