@@ -60,8 +60,6 @@ When the user has sent a message, it will check if the message has been written 
 
 ### Underlying Code
 
-Here I explain the code that made the chat app work.
-
 #### Create server
 
 First I created the server:
