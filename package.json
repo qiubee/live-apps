@@ -4,6 +4,7 @@
   "description": "real-time apps",
   "main": "chat/server.js",
   "scripts": {
+	"now-start": "node chat/server.js",
     "chat": "node chat/server.js",
     "devchat": "nodemon chat/server.js"
   },
