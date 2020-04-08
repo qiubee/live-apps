@@ -1,11 +1,4 @@
 {
     "version": 2,
-    "builds": [{"src": "chat/server.js", "use": "@now/node-server"}],
-    "routes": [
-        {
-            "src": "/",
-            "dest": "/chat/server.js",
-            "methods": ["GET"]
-        }
-    ]
+    "builds": [{"src": "chat/server.js", "use": "@now/node-server"}]
 }
