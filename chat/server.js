@@ -16,42 +16,55 @@ app.use("/", router);
 // chat sockets
 let members = [];
 chat.on("connection", function(socket) {
-	let name;
+	let user;
 	console.log("a user connected...");
-	socket.emit("general", "Welcome to the chat!");
 	
 	socket.on("username", function(username) {
-		if (username === null) {
-			username = "Anonymous";
-		}
-		console.log("new user: " + username + " (" + (members.length + 1) + " total members)");
-		name = username + "#" + members.length;
-		members.push(name);
+		user = saveUser(username);
+		console.log("new user: " + user + " (" + members.length + " total members)");
+		socket.emit("general", "Welcome to the chat " + user + "!");
 		socket.broadcast.emit("general", name + " joined the chat!");
 	});
 
 	socket.on("chat message", function(message) {
-		console.log(name + " messaged: " + message);
-		chat.emit("chat message", name + ": " + message);
+		console.log(user + " messaged: " + message);
+		console.log("current members:", members);
+		chat.emit("chat message", user + ": " + message);
 	});
 
 	socket.on("disconnect", function() {
-		socket.broadcast.emit("general", name + " left.");
-		if (members.length < 0) {
-			members = members.reduce(function(member, currentMember) {
-				if (member !== currentMember) {
-					member.push(member);
-				} return member;
-			}, []);
-		}
-		console.log(members);
-		console.log("user disconnected (" + members.length + " members remaining)");
+		socket.broadcast.emit("general", user + " left the chat.");
+		removeUser(user);
+		console.log(user + " disconnected (" + members.length + " members remaining)");
 	});
 });
 
 server.listen(port, function () {
 	console.log(`Listening on port \u001b[1m\u001b[36m${port}\u001b[0m\n\u001b[1m\u001b[36mlocalhost:${port}\u001b[0m`);
 });
+
+function saveUser(user) {
+	name = createUsername(user);
+	members.push(name);
+	return name;
+}
+
+function createUsername(username) {
+	if (username === null) {
+		username = "Anonymous";
+	}
+	username = username + "#" + (members.length + 1);
+	return username;
+}
+
+function removeUser(user) {
+	if (members.length > 0) {
+		members = members.filter(function(member) {
+			return member !== user;
+		});
+		return members;
+	}
+}
 
 function rewardMember() {
 
