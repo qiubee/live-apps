@@ -2,7 +2,7 @@
     "version": 2,
 	"builds": [
 		{
-			"src": "/chat/server.js",
+			"src": "chat/server.js",
 			"use": "@now/node-server"
 		}
 	],
