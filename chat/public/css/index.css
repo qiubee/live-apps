@@ -40,12 +40,39 @@ form button {
 	padding: 0.4em 0.6em;
 }
 
-#messages li:nth-child(odd) {
-    background: #eee;
+#messages li:not([class]) {
+	border-bottom: 0.1em solid #eee;
 }
+
+/* #messages li:nth-child(odd) {
+    background: #eee;
+} */
 
 #messages li.general {
 	background: #b4bbfb;
 	font-style: italic;
 	border-left: 0.3em solid black;
+}
+
+#messages li.bot {
+	background: #f4ae5e;
+	font-weight: bold;
+	border-left: 0.3em solid #242954;
+}
+
+#messages li.write {
+	background: #92eb7c;
+}
+
+#messages li.good {
+	background: #92eb7c;
+}
+
+#messages li.average {
+	background: #eee;
+}
+
+#messages li.bad {
+	background: #f35f5f;
+	color: white;
 }
