@@ -1,5 +1,5 @@
 function home(req, res) {
-	res.sendFile(__dirname + "/chat/views/index.html");
+	res.sendFile("./index.html", {root: "chat/views"});
 }
 
 module.exports = home;
