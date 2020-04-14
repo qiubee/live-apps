@@ -6,13 +6,16 @@ Series of apps that use [socket.io](https://github.com/socketio/socket.io) for r
 
 1. [**Dependencies**](#dependencies)
 2. [**Installation**](#installation)
-3. [**Chat app**](#chat)
-   * [About](#about)
+3. [**Main (untitled)**](#main-untitled)
+   * [About](#about-concept)
+   * [API's](#apis)
+4. [**Chat**](#chat)
+   * [About Chat](#about-chat)
    * [Unique Features](#unique-features)
    * [Custom events](#custom-events)
    * [Underlying code](#code)
-4. [**Resources**](#resources)
-5. [**License**](#license)
+5. [**Resources**](#resources)
+6. [**License**](#license)
 
 ## Dependencies
 
@@ -47,11 +50,28 @@ npm run chat
 
 **4.** Open `localhost:8000` in the browser
 
+## Main (untitled)
+
+To run the (---) app: (---).
+
+### About (concept)
+
+Using real-time information about driving trains and the current stock market to give the current stock prices based on trains currently driving. This app shows you the current stock exchange, but with a twist: the rate at which the stock values are updated is based on the punctuality of a driving train. The session will also end when the train has arrived on its final destination.
+
+**Unique feature:** Select a train and watch the current stock price of selected stocks, but if the train is running late the rate of the stocks being updated will also be delayed.
+
+### API's
+
+* [NS Developer API](https://apiportal.ns.nl/) (train information) [possible]
+*  (stock information)
+
+## Unique Features
+
 ## Chat
 
 To run the chat app: `npm run chat`.
 
-### About
+### About Chat
 
 A chat app with a unique feature to communicate with eachother. [Express](https://www.npmjs.com/package/express) and [socket.io](https://www.npmjs.com/package/socket.io) have been used to create the app.
 
