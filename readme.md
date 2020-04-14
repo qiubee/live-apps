@@ -8,7 +8,7 @@ Series of apps that use [socket.io](https://github.com/socketio/socket.io) for r
 2. [**Installation**](#installation)
 3. [**Chat app**](#chat)
    * [About](#about)
-   * [Unique Feature](#unique-feature)
+   * [Unique Features](#unique-features)
    * [Underlying code](#code)
 4. [**License**](#license)
 
@@ -38,7 +38,7 @@ npm install
 ```
 
 **3. Run server**
-Clone repository
+
 ```bash
 npm run chat
 ```
@@ -55,11 +55,9 @@ A chat app with a unique feature to communicate with eachother. [Express](https:
 
 The chat app has the following features:
 
-* Creating username
-* Rooms
-* [Writing Star](#unique-feature) (Unique Feature)
+* [Writing Star](#unique-features)
 
-### Unique Feature
+### Unique Features
 
 #### Writing Star
 
@@ -90,7 +88,7 @@ app.use(express.static("chat/public"));
 app.use("/", router);
 
 app.listen(port, function () {
-    console.log(`Listening on port \u001b[1m\u001b[36m${port}\u001b[0m\n\u001b[1m\u001b[36mlocalhost:${port}\u001b[0m`);
+    console.log("Listening on port localhost:8000");
 });
 ```
 
@@ -114,81 +112,7 @@ Then on the server I've made the server listen to the new server instead of the 
 server.listen(port, function () {});
 ```
 
-After that I've copied the HTML and CSS:
-
-**index.html**
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
-    <title>Chat</title>
-</head>
-<body>
-    <ul id="messages"></ul>
-    <form action="">
-        <input id="m" autocomplete="off"><button>Send</button>
-    </form>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="js/index.js"></script>
-</body>
-</html>
-```
-
-**index.css**
-
-```css
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font: 13px Helvetica, Arial;
-}
-
-form {
-    background: #000;
-    padding: 3px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-form input {
-    border: 0;
-    padding: 10px;
-    width: 90%;
-    margin-right: .5%;
-}
-
-form button {
-    width: 9%;
-    background: rgb(130, 224, 255);
-    border: none;
-    padding: 10px;
-}
-
-#messages {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-#messages li {
-    padding: 5px 10px;
-}
-
-#messages li:nth-child(odd) {
-    background: #eee;
-}
-```
-
-Then I created the JavaScript file:
+After the server was created I copied the HTML and CSS and created the JavaScript file:
 
 ```js
 const socket = io();
@@ -210,7 +134,7 @@ io.on("connection", function(socket) {
 
 #### Send message through socket
 
-Following the tutorial, when a user enters the message it should instead of reloading the page and sending the message to the server send it immidiately to the server without reloading. To do that JQuery has been used in the tutorial to achieve that, but instead of that I used normal JavaScript to get it done:
+Following the tutorial, when a user enters the message it should - instead of reloading the page and sending the message to the server - send it immidiately to the server without reloading. In the tutorial JQuery was used to achieve it, but instead I used regular JavaScript:
 
 **index.js**
 
@@ -228,15 +152,7 @@ Following the tutorial, when a user enters the message it should instead of relo
 })();
 ```
 
-To show what message has been sent to the server I added the following code:
-
-```js
-socket.on("chat message", function(message) {
-        console.log("Message: " + message);
-    });
-```
-
-Now the socket&#46;io looks like this:
+To show what message has been sent to the server I added the *chat message* feature in the server.js file. Now the code looks like this:
 
 **server.js**
 
@@ -255,11 +171,7 @@ io.on("connection", function(socket) {
 });
 ```
 
-When the user writes for example "Hello" the following will log in the terminal:
-
-```bash
-Message: Hello
-```
+Doing these *custom* events it's possible to create different features based on the event name.
 
 #### Show message to chat
 
