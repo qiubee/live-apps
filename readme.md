@@ -4,14 +4,23 @@ Series of apps that use [socket.io](https://github.com/socketio/socket.io) to be
 
 ## Contents
 
-1. [Installation](#install)
-2. [Chat app](#chat)
+1. [Dependencies](#dependencies)
+2. [Installation](#installation)
+3. [Chat app](#chat)
    * [About](#about)
    * [Unique Feature](#unique-feature)
    * [Underlying code](#code)
-3. [License](#license)
+4. [License](#license)
 
-## Install
+## Dependencies
+
+* Node.js
+* Express
+* socket&#46;io
+
+For other dependencies see [`package.json`](package.json)
+
+## Installation
 
 1. Clone repository
 
