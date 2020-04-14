@@ -10,7 +10,8 @@ Series of apps that use [socket.io](https://github.com/socketio/socket.io) for r
    * [About](#about)
    * [Unique Features](#unique-features)
    * [Underlying code](#code)
-4. [**License**](#license)
+4. [**Resources**](#resources)
+5. [**License**](#license)
 
 ## Dependencies
 
@@ -167,13 +168,16 @@ io.on("connection", function(socket) {
     socket.on("chat message", function(message) {
         console.log("Message: " + message);
     });
-    // ---------
 });
 ```
 
 Doing these *custom* events it's possible to create different features based on the event name.
 
 #### Show message to chat
+
+## Resources
+
+* [socket&#46;io - Get Started Tutorial](https://socket.io/get-started/chat)
 
 ## License
 
