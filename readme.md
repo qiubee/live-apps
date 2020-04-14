@@ -9,6 +9,7 @@ Series of apps that use [socket.io](https://github.com/socketio/socket.io) for r
 3. [**Chat app**](#chat)
    * [About](#about)
    * [Unique Features](#unique-features)
+   * [Custom events](#custom-events)
    * [Underlying code](#code)
 4. [**Resources**](#resources)
 5. [**License**](#license)
@@ -65,6 +66,34 @@ The chat app has the following features:
 When the user has sent a message, it will check if the message has been written correctly. If so, it will reward points but if the message contains spelling errors or incorrect grammar the user will lose points. The more points you earn, the more stars you get. A user can get a maximum amount of 5 stars.
 
 #### Code explanation
+
+### Custom events
+
+#### Server events
+
+* [`username`](#username)
+* [`commands`](#commands)
+* [`writing star message`](#writing-star-message)
+
+##### username
+
+Save username received from client, create unique user and save in list.
+
+##### commands
+
+Check a message received from the client on commands and serve the correct instructions if a command has been called.
+
+##### writing star message
+
+If the *!write* command has been called the [Writing Star](#unique-features) game will start.
+
+#### Client events
+
+* [`status`](#status)
+
+##### status
+
+The client will send the status of the current chat e.g. normal chat is active or the Writing Star chat is active.
 
 ### Underlying Code
 
