@@ -85,7 +85,7 @@ Check a message received from the client on commands and serve the correct instr
 
 ##### writing star message
 
-If the **!write** command has been called the [Writing Star](#unique-features) game will start.
+If the **!write** command has been called the [Writing Star](#writing-star) game will start.
 
 #### Client events
 
