@@ -1,16 +1,16 @@
 # Live apps
 
-Series of apps that use [socket.io](https://github.com/socketio/socket.io) to be interactive in real-time.
+Series of apps that use [socket.io](https://github.com/socketio/socket.io) for real-time data rendering and manipulation.
 
 ## Contents
 
-1. [Dependencies](#dependencies)
-2. [Installation](#installation)
-3. [Chat app](#chat)
+1. [**Dependencies**](#dependencies)
+2. [**Installation**](#installation)
+3. [**Chat app**](#chat)
    * [About](#about)
    * [Unique Feature](#unique-feature)
    * [Underlying code](#code)
-4. [License](#license)
+4. [**License**](#license)
 
 ## Dependencies
 
@@ -18,11 +18,11 @@ Series of apps that use [socket.io](https://github.com/socketio/socket.io) to be
 * Express
 * socket&#46;io
 
-For other dependencies see [`package.json`](package.json)
+For other dependencies see [**`package.json`**](package.json)
 
 ## Installation
 
-1. Clone repository
+**1. Clone repository**
 
 ```bash
 git clone https://github.com/qiubee/live-apps.git
@@ -31,19 +31,19 @@ git clone https://github.com/qiubee/live-apps.git
 cd live-apps
 ```
 
-2. Install dependencies
+**2. Install dependencies**
 
 ```bash
 npm install
 ```
 
-3. Run server
-
+**3. Run server**
+Clone repository
 ```bash
 npm run chat
 ```
 
-4. Open `localhost:8000` in the browser
+**4.** Open `localhost:8000` in the browser
 
 ## Chat
 
