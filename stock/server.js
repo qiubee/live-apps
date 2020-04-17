@@ -1,12 +1,21 @@
 const express = require("express");
+const hbs = require("express-handlebars");
 const router = require("./routes/router");
 const { stock } = require("./stock");
 
 // server
 const app = express();
 const server = require("http").createServer(app);
-
 const port = 8000;
+
+// set handlebars as templating engine
+app.set("view engine", "hbs");
+app.engine( "hbs", hbs({ 
+	extname: "hbs", 
+	defaultLayout: "default", 
+	layoutsDir: __dirname + "/views/layouts/",
+	partialsDir: __dirname + "/views/partials/"
+}));
 
 // use public folder for static files
 app.use(express.static("stock/public"));
