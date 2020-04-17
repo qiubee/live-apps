@@ -52,11 +52,11 @@ npm run chat
 
 **4.** Open `localhost:8000` in the browser
 
-## Main (untitled)
+## Stock Influencer
 
-To run the (---) app: (---).
+To run the Stock Influencer app: (---).
 
-### About (concept)
+### About Stock Influencer
 
 Using real-time information about driving trains and the current stock market to give the current stock prices based on trains currently driving. This app shows you the current stock exchange, but with a twist: the rate at which the stock values are updated is based on the punctuality of a driving train. The session will also end when the train has arrived on its final destination.
 
@@ -66,12 +66,12 @@ Using real-time information about driving trains and the current stock market to
 
 ### API's
 
-* [NS Developer API](https://apiportal.ns.nl/) (train information) [possible]
-*  (stock information)
+* [NS Developer API](https://apiportal.ns.nl/) (train information)
+* (stock information)
 
 ### Data Life Cycle Diagram
 
-A Data Life Cycle Diagram shows how data flows through the application. The image below shows the data cycle of the stock app.
+A **Data Life Cycle Diagram** shows how data flows through the application. The image below shows the data cycle of the Stock Influencer app.
 
 ![Diagram showing how the data from the API's are flowing through the stock app](images/data-life-cycle-diagram.jpg)
 
