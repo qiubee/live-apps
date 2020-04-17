@@ -47,7 +47,11 @@ npm install
 **3. Run server**
 
 ```bash
+# To run the chat app
 npm run chat
+
+# To run the Stock Influencer app
+npm run stock
 ```
 
 **4.** Open `localhost:8000` in the browser
