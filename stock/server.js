@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const hbs = require("express-handlebars");
 const router = require("./routes/router");
 const { stock } = require("./stock");
@@ -10,6 +11,7 @@ const port = 8000;
 
 // set handlebars as templating engine
 app.set("view engine", "hbs");
+app.set("views", path.join(__dirname + "/views"));
 app.engine( "hbs", hbs({ 
 	extname: "hbs", 
 	defaultLayout: "default", 
