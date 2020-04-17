@@ -4,11 +4,11 @@
   "description": "real-time apps",
   "main": "chat/server.js",
   "scripts": {
-	"now-start": "node chat/server.js",
+    "now-start": "node chat/server.js",
     "chat": "node chat/server.js",
-	"chatdev": "nodemon chat/server.js",
-	"stock": "node stock/server.js",
-	"stockdev": "nodemon stock/server.js"
+    "chatdev": "nodemon chat/server.js",
+    "stock": "node stock/server.js",
+    "stockdev": "nodemon stock/server.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/qiubee/live-apps#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "express-handlebars": "^4.0.3",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
