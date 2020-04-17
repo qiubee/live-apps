@@ -91,7 +91,7 @@ The chat app has the following features:
 
 * [Writing Star](#unique-features)
 
-### Unique Features
+### Unique Feature
 
 #### Writing Star
 
