@@ -1,5 +1,7 @@
 function travel(req, res) {
-	res.sendFile("./travel.html", { root: "stock/views" });
+	res.render("travel", {
+		title: "Trein informatie"
+	});
 }
 
 module.exports = travel;
