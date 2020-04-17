@@ -6,7 +6,9 @@
   "scripts": {
 	"now-start": "node chat/server.js",
     "chat": "node chat/server.js",
-    "devchat": "nodemon chat/server.js"
+	"chatdev": "nodemon chat/server.js",
+	"stock": "node stock/server.js",
+	"stockdev": "nodemon stock/server.js"
   },
   "repository": {
     "type": "git",
