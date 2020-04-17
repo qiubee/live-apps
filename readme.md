@@ -6,8 +6,8 @@ Series of apps that use [socket.io](https://github.com/socketio/socket.io) for r
 
 1. [**Dependencies**](#dependencies)
 2. [**Installation**](#installation)
-3. [**Main (untitled)**](#main-untitled)
-   * [About](#about-concept)
+3. [**Stock Influencer**](#stock-influencer)
+   * [About Stock Influencer](#about-stock-influencer)
    * [Features](#features)
    * [API's](#apis)
    * [Data Life Cycle Diagram](#data-life-cycle-diagram)
@@ -54,7 +54,7 @@ npm run chat
 
 ## Stock Influencer
 
-To run the Stock Influencer app: (---).
+To run the Stock Influencer app: `npm run stock`
 
 ### About Stock Influencer
 
@@ -77,7 +77,7 @@ A **Data Life Cycle Diagram** shows how data flows through the application. The 
 
 ## Chat
 
-To run the chat app: `npm run chat`.
+To run the chat app: `npm run chat`
 
 ### About Chat
 
