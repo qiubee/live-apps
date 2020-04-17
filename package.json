@@ -2,7 +2,7 @@
   "name": "live-apps",
   "version": "0.0.1",
   "description": "real-time apps",
-  "main": "chat/server.js",
+  "main": "stock/server.js",
   "scripts": {
     "now-start": "node chat/server.js",
     "chat": "node chat/server.js",
