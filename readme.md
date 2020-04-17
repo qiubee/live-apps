@@ -8,10 +8,12 @@ Series of apps that use [socket.io](https://github.com/socketio/socket.io) for r
 2. [**Installation**](#installation)
 3. [**Main (untitled)**](#main-untitled)
    * [About](#about-concept)
+   * [Features](#features)
    * [API's](#apis)
+   * [Data Life Cycle Diagram](#data-life-cycle-diagram)
 4. [**Chat**](#chat)
    * [About Chat](#about-chat)
-   * [Unique Features](#unique-features)
+   * [Unique Feature](#unique-feature)
    * [Custom events](#custom-events)
    * [Underlying code](#code)
 5. [**Resources**](#resources)
@@ -60,12 +62,18 @@ Using real-time information about driving trains and the current stock market to
 
 **Unique feature:** Select a train and watch the current stock price of selected stocks, but if the train is running late the rate of the stocks being updated will also be delayed.
 
+### Features
+
 ### API's
 
 * [NS Developer API](https://apiportal.ns.nl/) (train information) [possible]
 *  (stock information)
 
-## Unique Features
+### Data Life Cycle Diagram
+
+A Data Life Cycle Diagram shows how data flows through the application. The image below shows the data cycle of the stock app.
+
+![Diagram showing how the data from the API's are flowing through the stock app](images/data-life-cycle-diagram.jpg)
 
 ## Chat
 
