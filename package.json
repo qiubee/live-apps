@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/qiubee/live-apps#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "express": "^4.17.1",
     "express-handlebars": "^4.0.3",
     "socket.io": "^2.3.0"
