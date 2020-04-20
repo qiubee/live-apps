@@ -239,6 +239,7 @@ Doing these *custom* events it's possible to create different features based on 
 ## Resources
 
 * [socket&#46;io - Get Started Tutorial](https://socket.io/get-started/chat)
+* [5 ways to make HTTP requests](https://www.twilio.com/blog/2017/08/http-requests-in-node-js.html)
 
 ## License
 
