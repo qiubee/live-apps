@@ -1,13 +1,16 @@
-require("dotenv").config();
+const dotenv = require("dotenv");
 const express = require("express");
+const http = require("http");
 const path = require("path");
 const hbs = require("express-handlebars");
 const router = require("./routes/router");
 const { stock } = require("./stock");
 
+dotenv.config();
+
 // server
 const app = express();
-const server = require("http").createServer(app);
+const server = http.createServer(app);
 const port = 8000;
 
 // set handlebars as templating engine
